@@ -1,0 +1,34 @@
+button{
+    background: none;
+    border: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.navbar-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+
+}
+
+.links-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav-btn{
+    padding: 5px;
+    border: 2px black solid;
+    width: 6rem;
+    margin: 0.3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
