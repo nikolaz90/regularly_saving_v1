@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_05_112016) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_06_124927) do
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -23,4 +23,26 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_112016) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "years", force: :cascade do |t|
+    t.integer "year"
+    t.integer "monthly_target"
+    t.integer "january"
+    t.integer "febuary"
+    t.integer "march"
+    t.integer "april"
+    t.integer "may"
+    t.integer "june"
+    t.integer "july"
+    t.integer "august"
+    t.integer "september"
+    t.integer "october"
+    t.integer "november"
+    t.integer "december"
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_years_on_user_id"
+  end
+
+  add_foreign_key "years", "users"
 end

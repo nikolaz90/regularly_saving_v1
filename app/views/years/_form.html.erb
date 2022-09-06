@@ -1,0 +1,92 @@
+<%= form_with(model: year) do |form| %>
+  <% if year.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(year.errors.count, "error") %> prohibited this year from being saved:</h2>
+
+      <ul>
+        <% year.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :year, style: "display: block" %>
+    <%= form.number_field :year %>
+  </div>
+
+  <div>
+    <%= form.label :monthly_target, style: "display: block" %>
+    <%= form.number_field :monthly_target %>
+  </div>
+
+  <div>
+    <%= form.label :january, style: "display: block" %>
+    <%= form.number_field :january %>
+  </div>
+
+  <div>
+    <%= form.label :febuary, style: "display: block" %>
+    <%= form.number_field :febuary %>
+  </div>
+
+  <div>
+    <%= form.label :march, style: "display: block" %>
+    <%= form.number_field :march %>
+  </div>
+
+  <div>
+    <%= form.label :april, style: "display: block" %>
+    <%= form.number_field :april %>
+  </div>
+
+  <div>
+    <%= form.label :may, style: "display: block" %>
+    <%= form.number_field :may %>
+  </div>
+
+  <div>
+    <%= form.label :june, style: "display: block" %>
+    <%= form.number_field :june %>
+  </div>
+
+  <div>
+    <%= form.label :july, style: "display: block" %>
+    <%= form.number_field :july %>
+  </div>
+
+  <div>
+    <%= form.label :august, style: "display: block" %>
+    <%= form.number_field :august %>
+  </div>
+
+  <div>
+    <%= form.label :september, style: "display: block" %>
+    <%= form.number_field :september %>
+  </div>
+
+  <div>
+    <%= form.label :october, style: "display: block" %>
+    <%= form.number_field :october %>
+  </div>
+
+  <div>
+    <%= form.label :november, style: "display: block" %>
+    <%= form.number_field :november %>
+  </div>
+
+  <div>
+    <%= form.label :december, style: "display: block" %>
+    <%= form.number_field :december %>
+  </div>
+
+  <div>
+    <%# <%= form.label :user_id, style: "display: block" %>
+    <%= form.number_field :user_id, id: :year_user_id, value: current_user.id, type: :hidden %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

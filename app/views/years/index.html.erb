@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Years</h1>
+
+<div id="years">
+  <% @years.each do |year| %>
+    <% if year.user_id == current_user.id %>
+      <%= render year %>
+      <p>
+        <%= link_to "Show this year", year %>
+      </p>
+    <% end %>
+  <% end %>
+</div>
+
+<%= link_to "New year", new_year_path %>

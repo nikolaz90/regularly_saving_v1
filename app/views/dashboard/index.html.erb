@@ -1,2 +1,28 @@
-<h1>Dashboard#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+
+<section>
+    <div>
+        <h1>Dashboard</h1>
+        <% if user_signed_in? %>
+            <h2>Hello <%= current_user.email %></h2>
+            <%= link_to "change password", edit_user_registration_path %>
+        <% else %>
+            <h2>please sign in...</h2>
+        <% end %>
+
+
+
+
+    </div>
+    
+    <div>
+        <h5><%= link_to "view your savings", savings_overview_path%></h5>
+    </div>
+
+    <div>
+        <h5>Create a new year</h5>
+    </div>
+    
+</section>
+
+
+
