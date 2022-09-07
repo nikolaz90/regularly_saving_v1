@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+
+.color-one{
+    color:rgb(192, 217, 30)
+}
+.color-two{
+    color:rgb(57, 218, 156)
+}
+.color-three{
+    color:rgb(234, 61, 61)
+}
+.color-four{
+    color:rgb(183, 68, 225)
+}
+.color-five{
+    color:rgb(131, 215, 74)
+}
+.color-six{
+    color:rgb(225, 68, 154)
+}
+.color-seven{
+    color: rgb(237, 157, 157);
+}

@@ -1,12 +1,11 @@
-
-
 <%= javascript_import_module_tag "application" %>
+<section>
+    <h1>Home</h1>
+    <% if user_signed_in? %>
+        <p>Hey, great, you are signed in</p>
+    <% else%>
+        <p>Hello, great to see you. You are visiting this site as a guest</p>
+    <% end%>
 
+</section>
 
-<h1>Home</h1>
-<% if user_signed_in? %>
-    <p>Hey, great, you are signed in</p>
-<% else%>
-    <p>Hello, great to see you. You are visiting this site as a guest</p>
-<% end%>
-<p>Find me in app/views/home/index.html.erb</p>

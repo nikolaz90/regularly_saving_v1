@@ -1,3 +1,6 @@
+<% content_for :year do %>
+  <%= javascript_import_module_tag "years_index" %>
+<% end %>
 <p style="color: green"><%= notice %></p>
 
 <h1>Years</h1>
@@ -12,5 +15,7 @@
     <% end %>
   <% end %>
 </div>
+
+<p>you have saved for <%= @amount_of_years %></p>
 
 <%= link_to "New year", new_year_path %>

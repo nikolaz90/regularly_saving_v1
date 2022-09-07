@@ -9,6 +9,9 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "navbar"%>
     <%= javascript_importmap_tags %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee&family=Chakra+Petch:wght@300&family=Kumbh+Sans:wght@100&family=Noto+Sans+Mono&family=Zen+Loop&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -18,6 +21,7 @@
     <p class="alert"><%= alert %></p>
     
     <%= yield(:nav) %>
+    <%= yield(:year) %>
     <%= yield %>
   </body>
 </html>

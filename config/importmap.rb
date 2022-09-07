@@ -4,3 +4,4 @@ pin "application", preload: true
 pin "@hotwired/turbo-rails", to: "turbo.min.js", preload: true
 
 pin "nav_bar"
+pin "years_index"

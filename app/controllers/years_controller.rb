@@ -6,6 +6,8 @@ class YearsController < ApplicationController
   # GET /years or /years.json
   def index
     @years = Year.all
+    @my_years = @years.filter{|item| item.user_id == current_user.id}
+    @amount_of_years = @my_years.length
   end
 
   # GET /years/1 or /years/1.json
@@ -64,8 +66,6 @@ class YearsController < ApplicationController
     @year = current_user.years.find_by(id: params[:id])
     redirect_to years_path, notice: "Unauthorized action...." if @year.nil?
   end
-
-
 
   private
     # Use callbacks to share common setup or constraints between actions.

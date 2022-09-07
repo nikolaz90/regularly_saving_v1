@@ -1,15 +1,21 @@
 <% content_for :nav do %>
   <%= javascript_import_module_tag "nav_bar" %>
 <% end %>
+
 <nav class="navbar-container">
-    <h3><%= link_to "regularly", root_path%></h3>
+    <% if user_signed_in? %>
+        <h1><%= link_to "regularly", root_path, class:"nav-logo-title color-five"%></h1>
+    <% else %>
+        <h1><%= link_to "regularly", root_path, class:"nav-logo-title color-seven"%></h1>
+    <% end %>
+    
     <div class="links-container">
         <% if !user_signed_in? %>
-            <%= link_to "sign in", new_user_session_path, class:"nav-btn"%>
-            <%= link_to "sign up", new_user_registration_path, class:"nav-btn"%>
+            <%= link_to "sign in", new_user_session_path, class:"nav-btn color-one"%>
+            <%= link_to "sign up", new_user_registration_path, class:"nav-btn color-two"%>
         <% else %>
-            <%= link_to "dashboard", dashboard_index_path, class:"nav-btn"%>
-            <%= link_to "log out", destroy_user_session_path, class:"nav-btn", data: { turbo_method: "delete", turbo_confirm: "Are you sure?" } %>
+            <%= link_to "dashboard", dashboard_index_path, class:"nav-btn color-three"%>
+            <%= link_to "log out", destroy_user_session_path, class:"nav-btn color-four", data: { turbo_method: "delete", turbo_confirm: "Are you sure?" } %>
         <% end %>
 
     </div>
