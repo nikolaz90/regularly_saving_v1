@@ -1,6 +1,7 @@
 class YearsController < ApplicationController
   before_action :set_year, only: %i[ show edit update destroy ]
   before_action :authenticate_user!
+  before_action :correct_user, only: [:show, :edit, :destroy]
 
   # GET /years or /years.json
   def index
@@ -13,7 +14,8 @@ class YearsController < ApplicationController
 
   # GET /years/new
   def new
-    @year = Year.new
+    #@year = Year.new
+    @year = current_user.years.build
   end
 
   # GET /years/1/edit
@@ -22,8 +24,8 @@ class YearsController < ApplicationController
 
   # POST /years or /years.json
   def create
-    @year = Year.new(year_params)
-    
+    #@year = Year.new(year_params)
+    @year = current_user.years.build(year_params)
     respond_to do |format|
       if @year.save
         format.html { redirect_to year_url(@year), notice: "Year was successfully created." }
@@ -57,6 +59,13 @@ class YearsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def correct_user
+    @year = current_user.years.find_by(id: params[:id])
+    redirect_to years_path, notice: "Unauthorized action...." if @year.nil?
+  end
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -81,10 +81,12 @@
     <%= form.number_field :december %>
   </div>
 
-  <div>
+  <%# below div provides the current user id for association to the year being created but is 
+  unnecessary as association is being made with .build(year_params) in controller %>
+  <%# <div> %>
     <%# <%= form.label :user_id, style: "display: block" %>
-    <%= form.number_field :user_id, id: :year_user_id, value: current_user.id, type: :hidden %>
-  </div>
+    <%# <%= form.number_field :user_id, id: :year_user_id, value: current_user.id, type: :hidden %>
+  <%# </div> %>
 
   <div>
     <%= form.submit %>
