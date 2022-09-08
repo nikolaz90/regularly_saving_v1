@@ -1,11 +1,19 @@
 <%= javascript_import_module_tag "application" %>
-<section>
+<section class="section home-section">
     <h1>Home</h1>
+
     <% if user_signed_in? %>
         <p>Hey, great, you are signed in</p>
     <% else%>
-        <p>Hello, great to see you. You are visiting this site as a guest</p>
+        <article class="home-img-container bg-color-two">
+            <img src="https://cdn.pixabay.com/photo/2021/04/27/16/12/succulents-6211878_1280.png" class="home-plant-img" alt="succulent plant pots "/>
+            <div class="home-img-text-container">
+                <p>Hello, great to see you here!</p> 
+                <p>You are visiting this site as a guest.</p>
+                <p>create an account to get the most out of this tool, save your progress and see your pot grow!</p>
+            </div>
+        </article>
+        
     <% end%>
-
 </section>
 

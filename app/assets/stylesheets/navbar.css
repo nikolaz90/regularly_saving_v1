@@ -10,6 +10,8 @@ a{
 
 
 .navbar-container{
+    max-width: 95rem;
+    margin: auto;
     font-family: 'Bungee', cursive;
     display: flex;
     flex-direction: row;

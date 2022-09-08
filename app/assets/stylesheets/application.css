@@ -14,7 +14,10 @@
  *= require_self
  */
 
-
+*{
+    padding:3px;
+    box-sizing: border-box;
+}
 .color-one{
     color:rgb(192, 217, 30)
 }
@@ -35,4 +38,33 @@
 }
 .color-seven{
     color: rgb(237, 157, 157);
+}
+
+.bg-color-one{
+    background-color:rgb(216, 227, 144);
+}
+.bg-color-two{
+    background-color:rgb(178, 234, 213)
+}
+.bg-color-three{
+    background-color:rgb(235, 159, 159)
+}
+.bg-color-four{
+    background-color:rgb(203, 161, 218)
+}
+.bg-color-five{
+    background-color:rgb(178, 212, 155)
+}
+.bg-color-six{
+    background-color:rgb(218, 142, 184)
+}
+.bg-color-seven{
+    background-color: rgb(231, 185, 185);
+}
+
+.section{
+    max-width: 95rem;
+    min-height: 35rem;
+    margin: auto;
+    padding: 1rem;
 }
