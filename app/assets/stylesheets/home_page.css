@@ -25,8 +25,9 @@
     width: 22rem;
     height: 22rem;
     z-index: 2;
-    border-radius: 2rem;
+    border-radius: 1rem;
     box-shadow: 0px 0px 5px rgb(172, 172, 172), 3px 0px 40px rgb(172, 172, 172) inset;
+    background-color: white;
 }
 .home-img-text-container{
     text-align: right;
