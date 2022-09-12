@@ -1,0 +1,31 @@
+.sign-in-up-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-family: 'Noto Sans Mono', monospace;
+}
+
+
+.sign-in-up-btn{
+    padding: 5px;
+    border: 1px black solid;
+    background-color: white;
+    min-width: 8rem;
+    width: fit-content;
+    margin-top: 0.3rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+.sign-in-up-btn:hover{
+    color: black;
+    background-color: rgb(213, 236, 213);
+    box-shadow: 3px 3px 0px black;
+}
+
+@media (max-width:570px){
+    .sign-in-up-section{
+        text-align: center;
+    }
+}

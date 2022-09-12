@@ -18,6 +18,18 @@
     padding:3px;
     box-sizing: border-box;
 }
+
+button{
+    background: none;
+    border: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
 .color-one{
     color:rgb(192, 217, 30)
 }
@@ -67,4 +79,10 @@
     min-height: 35rem;
     margin: auto;
     padding: 1rem;
+}
+
+@media (max-width: 400px) {
+    .section{
+        text-align: center;
+    }
 }

@@ -1,0 +1,9 @@
+.shared-link{
+    color: inherit;
+    transition: all 0.3s ease-in-out;
+    margin-top: 0.5rem;
+    display: block;
+}
+.shared-link:hover{
+    color: red;
+}

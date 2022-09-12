@@ -1,0 +1,34 @@
+.edit-user-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Noto Sans Mono', monospace;
+}
+
+.edit-user-btn{
+    padding: 5px;
+    border: 1px black solid;
+    background-color: rgb(255, 241, 93);
+    min-width: 8rem;
+    width: fit-content;
+    margin-top: 0.3rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+.edit-user-btn:hover{
+    color: rgb(152, 0, 0);
+    background-color: white;
+    box-shadow: 3px 3px 0px black;
+}
+
+.delete-user-info{
+    max-width: 55ch;
+    height: fit-content;
+}
+
+.delete-account-btn{
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+

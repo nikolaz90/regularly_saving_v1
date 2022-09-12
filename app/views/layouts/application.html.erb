@@ -7,8 +7,8 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag "navbar"%>
-    <%= stylesheet_link_tag "home_page"%>
+
+    <%= stylesheet_link_tag "navbar","home_page", "sign_in", "shared", "edit_user" %>
     <%= javascript_importmap_tags %>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     
-    <%= yield(:nav) %>
+    <%# <%= yield(:nav) %>
     <%= yield(:year) %>
     <%= yield %>
   </body>
