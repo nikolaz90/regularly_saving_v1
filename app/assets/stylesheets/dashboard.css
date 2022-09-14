@@ -1,0 +1,29 @@
+.dashboard-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Noto Sans Mono', monospace;
+
+}
+
+.dashboard-admin-commands{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(-45deg,#f1b3a0,#ff9cc2,#aae8ff,#acf8e6);
+}
+
+.dashboard-admin-links{
+    background-color: white;
+    padding: 0.7rem;
+    border: 1px solid black;
+    transition: all 0.3s ease-in-out;
+}
+.dashboard-admin-links:hover{
+    box-shadow: 2px 2px 0px black;
+}
+
+.dashboard-overview-container{
+    background: linear-gradient(-45deg,#f2d3ca,#f3cbd9,#e4e9c9,#f2e8d1);
+}

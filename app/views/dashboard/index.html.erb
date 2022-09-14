@@ -1,26 +1,37 @@
-
-<section>
-    <div>
-        <h1>Dashboard</h1>
+<%# <%= javascript_import_module_tag "dashboard" %> 
+<section class="section dashboard-section">
+    
+        <h1>Welcome to the dashboard</h1>
         <% if user_signed_in? %>
-            <h2>Hello <%= current_user.email %></h2>
-            <%= link_to "change password", edit_user_registration_path %>
+            <div class="dashboard-admin-commands">
+                <p>Hi <%= current_user.email %></p>
+                <%= link_to "view your savings", savings_overview_path, class:"dashboard-admin-links" %>
+                <%= link_to "edit user", edit_user_registration_path, class:"dashboard-admin-links" %>
+            </div>
+            
+            <div class="dashboard-overview-container">
+                <h5>Overview</h5>
+                <p>You have savings over <span id="dashboard-overview-years" data-turbo-permanent ></span> year(s)</p>
+                <p>With a total saved of <span id="dashboard-overview-total" data-turbo-permanent>0</span></p>
+                <p>Against a total target of <span id="dashboard-overview-target" data-turbo-permanent>0</span></p>
+            </div>
+
+
+            
+
+            <div>
+                <h5>Create a new year</h5>
+            </div>
+
+
         <% else %>
             <h2>please sign in...</h2>
         <% end %>
-
-
-
-
-    </div>
     
-    <div>
-        <h5><%= link_to "view your savings", savings_overview_path%></h5>
-    </div>
+    
+    
 
-    <div>
-        <h5>Create a new year</h5>
-    </div>
+   
     
 </section>
 

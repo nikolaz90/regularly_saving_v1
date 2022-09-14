@@ -5,5 +5,6 @@ pin "@hotwired/turbo-rails", to: "turbo.min.js", preload: true
 
 pin "nav_bar"
 pin "years_index"
+pin "dashboard"
 
 pin "lottie", to: "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
