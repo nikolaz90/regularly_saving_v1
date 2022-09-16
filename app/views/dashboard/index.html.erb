@@ -1,6 +1,7 @@
-<%# <%= javascript_import_module_tag "dashboard" %> 
+<% content_for :dash do %>
+    <%= javascript_import_module_tag "dashboard" %>
+<% end %>
 <section class="section dashboard-section">
-    
         <h1>Welcome to the dashboard</h1>
         <% if user_signed_in? %>
             <div class="dashboard-admin-commands">
@@ -10,10 +11,26 @@
             </div>
             
             <div class="dashboard-overview-container">
-                <h5>Overview</h5>
-                <p>You have savings over <span id="dashboard-overview-years" data-turbo-permanent ></span> year(s)</p>
-                <p>With a total saved of <span id="dashboard-overview-total" data-turbo-permanent>0</span></p>
-                <p>Against a total target of <span id="dashboard-overview-target" data-turbo-permanent>0</span></p>
+                <h2>Overview :</h2>
+                <article class="dashboard-overview-item">
+                    <p class="dashboard-overview-item-title">Year(s) saving so far:</p>
+                    <span id="dashboard-overview-years" data-turbo-permanent ></span>
+                </article>
+                <article class="dashboard-overview-item">
+                    <p class="dashboard-overview-item-title">Total saved:</p>
+                    <span id="dashboard-overview-total" data-turbo-permanent>0</span>
+                </article>
+                <article class="dashboard-overview-item">
+                    <p class="dashboard-overview-item-title">Target:</p>
+                    <span id="dashboard-overview-target" data-turbo-permanent>0</span>
+                </article>
+                <article class="dashboard-overview-item">
+                    <p class="dashboard-overview-item-title">Acheivement (%):</p>
+                    <span id="dashboard-overview-percentage" data-turbo-permanent>0</span>
+                </article>
+                
+                
+                
             </div>
 
 
