@@ -1,86 +1,87 @@
-<article id="<%= dom_id year %>" class="single-year-article">
+<article id=<%= year_months[:year]%> class="single-year-article">
   <div class="single-year-brief">
     <p>
       <strong>Year:</strong>
-      <%= year.year %>
+      <%= year_months[:year] %>
     </p>
 
     <p>
       <strong>Monthly target:</strong>
-      <%= year.monthly_target %>
+      <%= year_months[:monthly_target] %>
     </p>
     <p>
       <strong>Year total: </strong>
-      <%= year.year%>
+      <%= year_months[:total]%>
     </p>
   </div>
   
   <div class="single-year-months-container">
     <p class="single-year-month">
       <strong>January:</strong>
-      <%= year.january %>
+      <%= year_months[:months][:january] %>
     </p>
 
     <p>
       <strong>Febuary:</strong>
-      <%= year.febuary %>
+      <%= year_months[:months][:jebuary] %>
     </p>
 
     <p>
       <strong>March:</strong>
-      <%= year.march %>
+      <%= year_months[:months][:march] %>
     </p>
 
     <p>
       <strong>April:</strong>
-      <%= year.april %>
+      <%= year_months[:months][:april] %>
     </p>
 
     <p>
       <strong>May:</strong>
-      <%= year.may %>
+      <%= year_months[:months][:may] %>
     </p>
 
     <p>
       <strong>June:</strong>
-      <%= year.june %>
+      <%= year_months[:months][:june] %>
     </p>
 
     <p>
       <strong>July:</strong>
-      <%= year.july %>
+      <%= year_months[:months][:july] %>
     </p>
 
     <p>
       <strong>August:</strong>
-      <%= year.august %>
+      <%= year_months[:months][:august] %>
     </p>
 
     <p>
       <strong>September:</strong>
-      <%= year.september %>
+      <%= year_months[:months][:september] %>
     </p>
 
     <p>
       <strong>October:</strong>
-      <%= year.october %>
+      <%= year_months[:months][:october] %>
     </p>
 
     <p>
       <strong>November:</strong>
-      <%= year.november %>
+      <%= year_months[:months][:november] %>
     </p>
 
     <p>
       <strong>December:</strong>
-      <%= year.december %>
+      <%= year_months[:months][:december] %>
     </p>
   </div>
   
 
   <p>
     <strong>Edited:</strong>
-    <%= year.created_at %>
+    <%= year_months[:created_at] %>
   </p>
 
+  <%= link_to "Show this year", "years/#{year_months[:id]}" %>
 </article>

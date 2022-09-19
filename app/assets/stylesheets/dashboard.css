@@ -3,20 +3,22 @@
     flex-direction: column;
     justify-content: space-around;
     font-family: 'Noto Sans Mono', monospace;
-
 }
 
 .dashboard-admin-commands{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
     background: linear-gradient(-45deg,#f1b3a0,#ff9cc2,#aae8ff,#acf8e6);
+    box-shadow: 4px 4px 0px black;
+    border: 1px black solid;
 }
 
 .dashboard-admin-links{
     background-color: white;
     padding: 0.7rem;
+    margin: 0.5rem;
     border: 1px solid black;
     transition: all 0.3s ease-in-out;
 }
@@ -28,9 +30,12 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 0.5rem;
     justify-content: space-around;
     align-items: center;
+    box-shadow: 4px 4px 0px black;
     background: linear-gradient(-45deg,#f2d3ca,#f3cbd9,#e4e9c9,#f2e8d1);
+    border: 1px black solid;
 }
 
 .dashboard-overview-item{
@@ -39,6 +44,7 @@
     text-align: center;
     border: 1px solid grey;
     padding: 0.5rem;
+    margin: 0.5rem;
     height: fit-content;
 }
 

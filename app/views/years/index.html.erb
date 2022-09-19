@@ -1,23 +1,30 @@
 <%# <% content_for :year do %>
   <%= javascript_import_module_tag "years"%> 
 <%# <% end %> 
-<p style="color: green"><%= notice %></p>
+<section class="section years-section">
+  <p style="color: green"><%= notice %></p>
 
-<h1>Years</h1>
+  <h1>Years</h1>
 
-<div id="years">
-  <% @years.each do |year| %>
-    <% if year.user_id == current_user.id %>
-      <%= render year %>
-      <p>
-      <%= link_to "Show this year", year %>
-      </p> 
-    <% end %>
-  <% end %>
-</div>
+  <%#<div id="years">
+  <%#  <% @years.each do |year| %>
+  <%#   <% if year.user_id == current_user.id %>
+  <%#      <%= render year %>
+  <%#      <p>
+        <%= link_to "Show this year", year %>
+  <%#      </p> 
+  <%#    <% end %>
+  <%#  <% end %>
+  <%#</div> %>
 
-<p>you have saved for <%= @amount_of_years %></p>
-<p>for each year there is a total of: </p> 
+  <div>
+    <%= render partial: "year_months", collection: @my_years_months%>
+  </div>
+
+  <p>you have saved for <%= @amount_of_years %></p>
+  <p>for each year there is a total of: </p> 
 
 
-<%= link_to "New year", new_year_path %>
+  <%= link_to "New year", new_year_path %>
+
+</section>

@@ -4,13 +4,13 @@
 <section class="section dashboard-section">
         <h1>Welcome to the dashboard</h1>
         <% if user_signed_in? %>
-            <div class="dashboard-admin-commands">
+            <div class="dashboard-admin-commands" id="dashboard-admin-commands-id">
                 <p>Hi <%= current_user.email %></p>
                 <%= link_to "view your savings", savings_overview_path, class:"dashboard-admin-links" %>
                 <%= link_to "edit user", edit_user_registration_path, class:"dashboard-admin-links" %>
             </div>
             
-            <div class="dashboard-overview-container">
+            <div class="dashboard-overview-container" id="dashboard-overview-container-id">
                 <h2>Overview :</h2>
                 <article class="dashboard-overview-item">
                     <p class="dashboard-overview-item-title">Year(s) saving so far:</p>

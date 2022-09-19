@@ -1,7 +1,7 @@
 //assigning html elements on dashboard/index to variables 
-document.addEventListener("turbo:load", async (e)=>{
+document.addEventListener("turbo:load", ()=>{
     const years = document.getElementById('dashboard-overview-years')
-    years.innerText = "retrieving data"
+    years.innerText = "retrieving data" 
 
     const total = document.getElementById('dashboard-overview-total')
     total.innerText = "retrieving data"
@@ -37,25 +37,29 @@ document.addEventListener("turbo:load", async (e)=>{
 
 
 
+    //box shadow effect
+    const adminContainer = document.getElementById("dashboard-admin-commands-id")
+    const overviewContainer = document.getElementById("dashboard-overview-container-id")
+    let pixelCount = 4
+    let scrollAmount = 0
 
-        // e.preventDefault()
-        // //e.preventDefault()
-        // await getYears()
-        // // years.innerText = "awaiting info"
-        // // let temp = ''
-        // // getYears().then(response => {
-        // //     temp = response.length
-        // // }).then(res => {
-        // //     years.innerText = temp
-        // // })
-        // e.detail.resume()
-        // //e.detail.resume()
-        // console.log('evvent');
-
-
+    document.addEventListener('scroll', ()=>{
+        if(scrollAmount < window.pageYOffset && pixelCount<= 10){
+            pixelCount +=1
+        }else if(scrollAmount > window.pageYOffset && pixelCount>=4){
+            pixelCount -=1
+        }
+        adminContainer.style.boxShadow = `${pixelCount}px ${pixelCount}px 0px black`
+        adminContainer.style.background = `linear-gradient(-${pixelCount}0deg,#f1b3a0,#ff9cc2,#aae8ff,#acf8e6)`
+        overviewContainer.style.boxShadow = `${pixelCount}px ${pixelCount}px 0px black`
+        overviewContainer.style.background = `linear-gradient(-${pixelCount}0deg,#f2d3ca,#f3cbd9,#e4e9c9,#f2e8d1)`
+        scrollAmount = window.pageYOffset
+    })   
 
     console.log(getYears());
 
     console.log('dashy');
 
 })
+
+
