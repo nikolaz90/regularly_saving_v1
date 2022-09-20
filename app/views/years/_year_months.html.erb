@@ -1,18 +1,31 @@
 <article id=<%= year_months[:year]%> class="single-year-article">
-  <div class="single-year-brief">
-    <p>
-      <strong>Year:</strong>
-      <%= year_months[:year] %>
-    </p>
+  <div class="<%=(year_months[:monthly_target] * 12)<=year_months[:total] ? 'single-year-brief achieved' : 'single-year-brief under-achieved' %>">
+    <div class="brief-target">
+      <p>
+        <strong>Year:</strong>
+        <%= year_months[:year] %>
+      </p>
 
-    <p>
-      <strong>Monthly target:</strong>
-      <%= year_months[:monthly_target] %>
-    </p>
-    <p>
-      <strong>Year total: </strong>
-      <%= year_months[:total]%>
-    </p>
+      <p>
+        <strong>Monthly target:</strong>
+        <%= year_months[:monthly_target] %>
+      </p>
+    </div>
+    <div class="brief-total">
+      <p>
+        <strong>Year total: </strong>
+        <%= year_months[:total]%>
+        
+      </p>
+      <p>
+        <small class="single-year-brief-message">
+          <%= (year_months[:monthly_target] * 12)<=year_months[:total] ? "target met! good job!" : "below expected, oh well!" %>
+        </small>
+      </p>
+    </div>
+    
+    
+    
   </div>
   
   <div class="single-year-months-container">
@@ -23,7 +36,7 @@
 
     <p>
       <strong>Febuary:</strong>
-      <%= year_months[:months][:jebuary] %>
+      <%= year_months[:months][:febuary] %>
     </p>
 
     <p>
@@ -79,9 +92,9 @@
   
 
   <p>
-    <strong>Edited:</strong>
+    <strong>Created:</strong>
     <%= year_months[:created_at] %>
   </p>
 
-  <%= link_to "Show this year", "years/#{year_months[:id]}" %>
+  <%= link_to "More info", "years/#{year_months[:id]}", class:"show-year-link" %>
 </article>

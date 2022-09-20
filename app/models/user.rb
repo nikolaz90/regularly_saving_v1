@@ -4,6 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :years
+  has_many :years, dependent: :destroy
   accepts_nested_attributes_for :years
 end

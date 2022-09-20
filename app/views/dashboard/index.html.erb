@@ -6,50 +6,34 @@
         <% if user_signed_in? %>
             <div class="dashboard-admin-commands" id="dashboard-admin-commands-id">
                 <p>Hi <%= current_user.email %></p>
-                <%= link_to "view your savings", savings_overview_path, class:"dashboard-admin-links" %>
+                <%= link_to "view & manage your savings", years_path, class:"dashboard-admin-links" %>
                 <%= link_to "edit user", edit_user_registration_path, class:"dashboard-admin-links" %>
             </div>
             
             <div class="dashboard-overview-container" id="dashboard-overview-container-id">
                 <h2>Overview :</h2>
                 <article class="dashboard-overview-item">
-                    <p class="dashboard-overview-item-title">Year(s) saving so far:</p>
+                    <p class="dashboard-overview-item-title">Year(s) saving so far :</p>
                     <span id="dashboard-overview-years" data-turbo-permanent ></span>
                 </article>
                 <article class="dashboard-overview-item">
-                    <p class="dashboard-overview-item-title">Total saved:</p>
+                    <p class="dashboard-overview-item-title">Total saved :</p>
                     <span id="dashboard-overview-total" data-turbo-permanent>0</span>
                 </article>
                 <article class="dashboard-overview-item">
-                    <p class="dashboard-overview-item-title">Target:</p>
+                    <p class="dashboard-overview-item-title">Target :</p>
                     <span id="dashboard-overview-target" data-turbo-permanent>0</span>
                 </article>
                 <article class="dashboard-overview-item">
-                    <p class="dashboard-overview-item-title">Acheivement (%):</p>
+                    <p class="dashboard-overview-item-title">Acheivement :</p>
                     <span id="dashboard-overview-percentage" data-turbo-permanent>0</span>
+                    %
                 </article>
-                
-                
-                
             </div>
-
-
-            
-
-            <div>
-                <h5>Create a new year</h5>
-            </div>
-
 
         <% else %>
             <h2>please sign in...</h2>
         <% end %>
-    
-    
-    
-
-   
-    
 </section>
 
 

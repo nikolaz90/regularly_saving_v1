@@ -1,9 +1,11 @@
-<h1>New year</h1>
+<section class="section years-section">
+  <h1>New year</h1>
 
-<%= render "form", year: @year %>
+  <%= render "form", year: @year %>
 
-<br>
+  <br>
 
-<div>
-  <%= link_to "Back to years", years_path %>
-</div>
+  <div>
+    <%= link_to "Back to years", years_path, class:"btn" %>
+  </div>
+</section>

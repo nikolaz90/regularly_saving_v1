@@ -11,11 +11,41 @@
     display: flex;
     flex-direction: column;
     box-shadow: 0px 0px 10px rgb(210, 210, 210);
+    margin-bottom: 1rem;
 }
 
 .single-year-brief{
-    background-color: rgb(242, 252, 252);
+    background: linear-gradient(-45deg,#caf1f2,#b7d7f3,#9ddbf0,#79d2e8);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     box-shadow: 0px 2px 5px rgb(174, 174, 174);
+}
+
+.brief-total{
+    text-align: right;
+}
+@media (max-width:504px) {
+    .single-year-brief{
+        justify-content: center;
+        text-align: center;
+    }
+    .brief-total{
+        text-align: inherit;
+    }
+}
+.achieved{
+    background: linear-gradient(-45deg,#caf2d5,#cef3b7,#cbf09d,#79e8b6);
+}
+.under-achieved{
+    background: linear-gradient(-45deg,#f7b7b7,#f3eab7,#f0ed9d,#eab4b4);
+}
+
+.single-year-brief-message{
+    background: rgba(240, 240, 240, 0.635);
+    border-radius: 2rem;
+    padding: 0.4rem;
 }
 
 .single-year-months-container{
@@ -30,5 +60,42 @@
     background-color: rgb(244, 255, 251);
     padding: 0.5rem;
     margin: 1rem;
+}
 
+.show-year-link{
+    border: 1px black solid;
+    padding: 0.5rem;
+    width: fit-content;
+    transition: all 0.3s ease-in-out;
+    align-self: center;
+    margin-bottom: 1rem;
+}
+.show-year-link:hover{
+    box-shadow: 2px 2px 0px black;
+}
+
+/* show partial */
+.show-links-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.show-link{
+    margin: 1rem;
+}
+
+.show-links-fragment{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media (max-width:700px) {
+    .show-links-container{
+        justify-content: center;
+    }
 }

@@ -17,14 +17,9 @@
   <%#  <% end %>
   <%#</div> %>
 
-  <div>
-    <%= render partial: "year_months", collection: @my_years_months%>
-  </div>
-
-  <p>you have saved for <%= @amount_of_years %></p>
-  <p>for each year there is a total of: </p> 
-
-
-  <%= link_to "New year", new_year_path %>
+  
+  <%= render partial: "year_months", collection: @my_years_months%>
+  
+  <%= link_to "Create a new year", new_year_path, class:"btn color-six" %>
 
 </section>
