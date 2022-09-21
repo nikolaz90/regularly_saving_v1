@@ -15,4 +15,11 @@ class Year < ApplicationRecord
   attribute :october, :integer, default: 0
   attribute :november, :integer, default: 0
   attribute :december, :integer, default: 0
+
+
+  def organised_year_and_total
+    months_obj = {january: self.january, febuary: self.febuary, march: self.march, april: self.april, may: self.may, june: self.june, july: self.july, august: self.august, september: self.september, october: self.october, november: self.november, december: self.december}
+    tot = months_obj.values.sum
+    ans = {months_object: months_obj, total: tot, congrats: "well done matey"}
+  end
 end

@@ -26,7 +26,7 @@ document.addEventListener("turbo:load", ()=>{
                 console.log(error);
         }    
         years.innerText = data.length
-        total.innerText = data.reduce((acc, curr) => acc + curr.total, 0)
+        total.innerText = data.reduce((acc, curr) => acc + curr.organised_year_and_total.total, 0)
         target.innerText = data.reduce((acc, curr) => acc + (curr.monthly_target*12), 0)
         percentage.innerText = Number((total.innerText/target.innerText)*100).toFixed(2)
         console.log('fetched');
