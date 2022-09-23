@@ -99,3 +99,25 @@
         justify-content: center;
     }
 }
+
+/* Year form */
+
+.year-form{
+    display: flex;
+    flex-direction: column;
+    background-color: #c7d8de;
+}
+
+.form-target-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px black solid;
+}
+
+.form-months-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

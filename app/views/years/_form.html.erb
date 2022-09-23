@@ -1,4 +1,4 @@
-<%= form_with(model: year) do |form| %>
+<%= form_with(model: year, class: "year-form") do |form| %>
   <% if year.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(year.errors.count, "error") %> prohibited this year from being saved:</h2>
@@ -11,75 +11,81 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :year, style: "display: block" %>
-    <%= form.number_field :year, min:0, in: 1990...2051 %><span><small>add a year from 1990 to 2050</small></span>
-  </div>
+  <div class="form-target-container">
+    <div>
+      <%= form.label :year, style: "display: block" %>
+      <%= form.number_field :year, min:0, in: 1990...2051 %><span><small>add a year from 1990 to 2050</small></span>
+    </div>
 
-  <div>
-    <%= form.label :monthly_target, style: "display: block" %>
-    <%= form.number_field :monthly_target, min: 0, step: 25 %>
+    <div>
+      <%= form.label :monthly_target, style: "display: block" %>
+      <%= form.number_field :monthly_target, min: 0, step: 25 %>
+    </div>
   </div>
+  
+<div class="form-months-container">
 
-  <div>
-    <%= form.label :january, style: "display: block" %>
-    <%= form.number_field :january, min: 0, step: 25%>
-  </div>
+    <div>
+      <%= form.label :january, style: "display: block" %>
+      <%= form.number_field :january, min: 0, step: 25%>
+    </div>
 
-  <div>
-    <%= form.label :febuary, style: "display: block" %>
-    <%= form.number_field :febuary, min: 0, step: 25 %>
-  </div>
+    <div>
+      <%= form.label :febuary, style: "display: block" %>
+      <%= form.number_field :febuary, min: 0, step: 25 %>
+    </div>
 
-  <div>
-    <%= form.label :march, style: "display: block" %>
-    <%= form.number_field :march, min: 0, step: 25 %>
-  </div>
+    <div>
+      <%= form.label :march, style: "display: block" %>
+      <%= form.number_field :march, min: 0, step: 25 %>
+    </div>
 
-  <div>
-    <%= form.label :april, style: "display: block" %>
-    <%= form.number_field :april, min: 0, step: 25 %>
-  </div>
+    <div>
+      <%= form.label :april, style: "display: block" %>
+      <%= form.number_field :april, min: 0, step: 25 %>
+    </div>
 
-  <div>
-    <%= form.label :may, style: "display: block" %>
-    <%= form.number_field :may, min: 0, step: 25 %>
-  </div>
+    <div>
+      <%= form.label :may, style: "display: block" %>
+      <%= form.number_field :may, min: 0, step: 25 %>
+    </div>
 
-  <div>
-    <%= form.label :june, style: "display: block" %>
-    <%= form.number_field :june, min: 0, step: 25 %>
-  </div>
+    <div>
+      <%= form.label :june, style: "display: block" %>
+      <%= form.number_field :june, min: 0, step: 25 %>
+    </div>
 
-  <div>
-    <%= form.label :july, style: "display: block" %>
-    <%= form.number_field :july, min: 0, step: 25 %>
-  </div>
+    <div>
+      <%= form.label :july, style: "display: block" %>
+      <%= form.number_field :july, min: 0, step: 25 %>
+    </div>
 
-  <div>
-    <%= form.label :august, style: "display: block" %>
-    <%= form.number_field :august, min: 0, step: 25 %>
-  </div>
+    <div>
+      <%= form.label :august, style: "display: block" %>
+      <%= form.number_field :august, min: 0, step: 25 %>
+    </div>
 
-  <div>
-    <%= form.label :september, style: "display: block" %>
-    <%= form.number_field :september, min: 0, step: 25 %>
-  </div>
+    <div>
+      <%= form.label :september, style: "display: block" %>
+      <%= form.number_field :september, min: 0, step: 25 %>
+    </div>
 
-  <div>
-    <%= form.label :october, style: "display: block" %>
-    <%= form.number_field :october, min: 0, step: 25 %>
-  </div>
+    <div>
+      <%= form.label :october, style: "display: block" %>
+      <%= form.number_field :october, min: 0, step: 25 %>
+    </div>
 
-  <div>
-    <%= form.label :november, style: "display: block" %>
-    <%= form.number_field :november, min: 0, step: 25 %>
-  </div>
+    <div>
+      <%= form.label :november, style: "display: block" %>
+      <%= form.number_field :november, min: 0, step: 25 %>
+    </div>
 
-  <div>
-    <%= form.label :december, style: "display: block" %>
-    <%= form.number_field :december, min: 0, step: 25 %>
-  </div>
+    <div>
+      <%= form.label :december, style: "display: block" %>
+      <%= form.number_field :december, min: 0, step: 25 %>
+    </div>
+</div>
+  
 
   <%# below div provides the current user id for association to the year being created but is 
   unnecessary as association is being made with .build(year_params) in controller %>
