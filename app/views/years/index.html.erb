@@ -4,22 +4,11 @@
 <section class="section years-section">
   <p style="color: green"><%= notice %></p>
 
-  <h1>Years</h1>
+  <h1>Years</h1>  
+  <% @my_years.each do |my_year| %>
+    <%= render partial: "year_months", object: my_year, as: :year %>
+  <% end %>
 
-  <%#<div id="years">
-  <%#  <% @years.each do |year| %>
-  <%#   <% if year.user_id == current_user.id %>
-  <%#      <%= render year %>
-  <%#      <p>
-        <%= link_to "Show this year", year %>
-  <%#      </p> 
-  <%#    <% end %>
-  <%#  <% end %>
-  <%#</div> %>
-
-  
-  <%= render partial: "year_months", collection: @my_years_months%>
-  
   <%= link_to "Create a new year", new_year_path, class:"btn color-six" %>
 
 </section>

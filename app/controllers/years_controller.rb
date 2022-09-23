@@ -7,12 +7,12 @@ class YearsController < ApplicationController
   def index
     @years = Year.all
     @my_years = @years.filter{|item| item.user_id == current_user.id}
-    @my_years_months = [] 
-    @my_years.each do |y| 
-      months = Hash(january: y.january, febuary: y.febuary, march: y.march, april: y.april, may: y.may, june: y.june, july: y.july, august: y.august, september: y.september, october: y.october, november: y.november, december: y.december)
-      total = months.values.sum
-      @my_years_months << Hash(id: y.id, user_id: y.user_id, months: months,monthly_target: y.monthly_target, total: total, year: y.year, created_at: y.created_at, updated_at: y.updated_at, organised_year_and_total: y.organised_year_and_total) 
-    end
+    # @my_years_months = [] 
+    # @my_years.each do |y| 
+    #   months = Hash(january: y.january, febuary: y.febuary, march: y.march, april: y.april, may: y.may, june: y.june, july: y.july, august: y.august, september: y.september, october: y.october, november: y.november, december: y.december)
+    #   total = months.values.sum
+    #   @my_years_months << Hash(id: y.id, user_id: y.user_id, months: months,monthly_target: y.monthly_target, total: total, year: y.year, created_at: y.created_at, updated_at: y.updated_at, organised_year_and_total: y.organised_year_and_total) 
+    # end
     @amount_of_years = @my_years.length
   end
  
