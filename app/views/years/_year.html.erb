@@ -27,7 +27,7 @@
   </div>
   
   <p>
-    <strong>Edited:</strong>
-    <%= year.created_at %>
+    <strong>Created</strong>
+    <small><%= year.created_at.strftime("at %H:%M on %d/%m/%y") %></small>
   </p>
 </article>

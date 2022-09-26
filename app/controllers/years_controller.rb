@@ -41,7 +41,7 @@ class YearsController < ApplicationController
   def update
     respond_to do |format|
       if @year.update(year_params)
-        format.html { redirect_to year_url(@year), notice: "Year was successfully updated." }
+        format.html { redirect_to year_url(@year), notice: "Year was successfully edited." }
         format.json { render :show, status: :ok, location: @year }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -55,7 +55,7 @@ class YearsController < ApplicationController
     @year.destroy
 
     respond_to do |format|
-      format.html { redirect_to years_url, notice: "Year was successfully destroyed." }
+      format.html { redirect_to years_url, notice: "Year was successfully deleted." }
       format.json { head :no_content }
     end
   end

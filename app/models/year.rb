@@ -22,8 +22,7 @@ class Year < ApplicationRecord
     months_obj = {january: self.january, febuary: self.febuary, march: self.march, april: self.april, may: self.may, june: self.june, july: self.july, august: self.august, september: self.september, october: self.october, november: self.november, december: self.december}
     tot = months_obj.values.sum
     is_on_target = tot >= (self.monthly_target)*12
-    congrats_messages = is_on_target ? "Well done!" : "better luck next time"
-
+    congrats_messages = is_on_target ? "target met! good job!" : "below expected"
 
     ans = {months_object: months_obj, total: tot, is_on_target: is_on_target, congrats: congrats_messages}
   end

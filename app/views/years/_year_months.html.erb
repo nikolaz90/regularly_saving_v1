@@ -18,7 +18,7 @@
      </p>
       <p>
         <small class="single-year-brief-message">
-          <%= year.organised_year_and_total[:is_on_target]  ? "target met! good job!" : "below expected, oh well!" %>
+          <%= year.organised_year_and_total[:congrats] %>
         </small>
       </p>
     </div>    
@@ -33,9 +33,9 @@
     <% end %>
   </div>
   <p>
-    <strong>Created:</strong>
-    <%= year.created_at %>
+    <strong>Created</strong>
+    <%= year.created_at.strftime("at %H:%M on %d/%m/%y") %>
   </p>
 
-  <%= link_to "More info", "years/#{year.id}", class:"show-year-link" %>
+  <%= link_to "View and Edit", "years/#{year.id}", class:"show-year-link" %>
 </article>

@@ -14,7 +14,8 @@
   <div class="form-target-container">
     <div>
       <%= form.label :year, style: "display: block" %>
-      <%= form.number_field :year, min:0, in: 1990...2051 %><span><small>add a year from 1990 to 2050</small></span>
+      <%= form.number_field :year, min:0, in: 1990...2051 %>
+      <p><small>add a year from 1990 to 2050</small></p>
     </div>
 
     <div>
@@ -24,7 +25,6 @@
   </div>
   
 <div class="form-months-container">
-
     <div>
       <%= form.label :january, style: "display: block" %>
       <%= form.number_field :january, min: 0, step: 25%>
@@ -84,6 +84,11 @@
       <%= form.label :december, style: "display: block" %>
       <%= form.number_field :december, min: 0, step: 25 %>
     </div>
+
+
+
+
+    
 </div>
   
 
@@ -95,6 +100,6 @@
   <%# </div> %>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit class:"btn" %>
   </div>
 <% end %>

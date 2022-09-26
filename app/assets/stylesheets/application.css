@@ -79,6 +79,10 @@ a{
     background-color: rgb(231, 185, 185);
 }
 
+.alerts-div{
+    font-family: 'Noto Sans Mono', monospace;
+}
+
 .section{
     max-width: 95rem;
     min-height: 35rem;
