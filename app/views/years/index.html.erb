@@ -4,9 +4,13 @@
 <section class="section years-section">
   <p style="color: green"><%= notice %></p>
 
-  <h1>Years</h1>  
-  <% @my_years.each do |my_year| %>
-    <%= render partial: "year_months", object: my_year, as: :year %>
+  <h1>Years</h1> 
+  <% if @my_years.length > 0 %>
+    <% @my_years.each do |my_year| %>
+      <%= render partial: "year_months", object: my_year, as: :year %>
+    <% end %>
+  <% else %>
+    <p>Wow, there's nothing here! Get started by 'creating' a year.</p>
   <% end %>
 
   <%= link_to "Create a new year", new_year_path, class:"btn color-six" %>

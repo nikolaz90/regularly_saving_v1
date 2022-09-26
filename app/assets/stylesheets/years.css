@@ -98,6 +98,9 @@
     .show-links-container{
         justify-content: center;
     }
+    .single-year-months-container{
+        justify-content: space-around;
+    }
 }
 
 /* Year form */

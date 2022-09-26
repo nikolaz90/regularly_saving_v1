@@ -34,9 +34,14 @@
     width: 37rem;
 }
 
+.home-intro-para{
+    margin-top: 5rem;
+}
+
 @media (max-width:1090px) {
     .home-img-container{
         justify-content: center;
+        height: fit-content;
     }   
     .home-img-text-container{
         text-align: center;

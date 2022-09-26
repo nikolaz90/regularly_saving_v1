@@ -13,7 +13,6 @@ document.addEventListener("turbo:load", ()=>{
     percentage.innerText = "retrieving data"
 
     //function to retrieve data from json endpoint and assign to dashboard elements
-
     let getYears = async function (){
         let data = []
         try {
@@ -27,15 +26,13 @@ document.addEventListener("turbo:load", ()=>{
         }    
         years.innerText = data.length
         total.innerText = data.reduce((acc, curr) => acc + curr.organised_year_and_total.total, 0)
-        target.innerText = data.reduce((acc, curr) => acc + (curr.monthly_target*12), 0)
+        target.innerText = data.reduce((acc, curr) => acc + (curr.monthly_target*12), 0) 
         percentage.innerText = Number((total.innerText/target.innerText)*100).toFixed(2)
+        percentage.innerText === 'NaN' ? percentage.innerText = 0: null
         console.log('fetched');
         return data
     }
     getYears()
-
-
-
 
     //box shadow effect
     const adminContainer = document.getElementById("dashboard-admin-commands-id")
@@ -57,9 +54,7 @@ document.addEventListener("turbo:load", ()=>{
     })   
 
     console.log(getYears());
-
     console.log('dashy');
-
 })
 
 
