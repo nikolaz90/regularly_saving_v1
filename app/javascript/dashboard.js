@@ -16,7 +16,7 @@ document.addEventListener("turbo:load", ()=>{
     let getYears = async function (){
         let data = []
         try {
-            await fetch('http://localhost:3000/years.json')
+            await fetch('https://mbs-regularly.fly.dev/years.json')
                 .then(response => response.json())
                 .then(years =>{
                     return data = years
@@ -54,7 +54,6 @@ document.addEventListener("turbo:load", ()=>{
     })   
 
     console.log(getYears());
-    console.log('dashy');
 })
 
 
